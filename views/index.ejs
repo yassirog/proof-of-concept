@@ -1,0 +1,52 @@
+<%- include('./partials/head')%>
+<header>
+  <div class="title">
+    <h1>Exposense</h1>
+  </div>
+</header>
+
+<div class="middle-text">
+  <p><%= tno[0].intro%></p>
+</div>
+
+<% tno.forEach(tno => {%> <% tno.chapters.forEach(chapter => {%>
+<article class="popup-message">
+  <a class="loading-picture">
+    <picture>
+      <source srcset="/assets/close.avif" type="image/avif" />
+      <source srcset="/assets/close.webp" type="image/webp" />
+      <img
+        class="loading-picture"
+        loading="lazy"
+        src="/assets/close.png"
+        alt="dicht knop"
+      />
+    </picture>
+  </a>
+  <div class="popup-image">
+    <img
+      loading="lazy"
+      src="/assets/<%= chapter.id %>.<%= chapter.title %>.svg"
+      alt="<%= chapter.title %>"
+    />
+  </div>
+  <h3><%= chapter.id%>. <%= chapter.title%></h3>
+  <%- chapter.content%>
+  <button class="popup-button">
+    Bekijk de video
+    <picture class="popup-arrow-button">
+      <source srcset="/assets/right-arrow.avif" type="image/avif" />
+      <source srcset="/assets/right-arrow.webp" type="image/webp" />
+      <img
+        loading="lazy"
+        src="/assets/right-arrow.png"
+        alt="<%= chapter.title %> video"
+      />
+    </picture>
+  </button>
+</article>
+<% }) %> <% }) %>
+
+<div class="title">
+  <h1>Footer</h1>
+</div>
