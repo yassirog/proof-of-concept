@@ -1,18 +1,37 @@
-<%- include('./partials/head')%>
-<header>
-  <div class="title">
-    <h1>Exposense</h1>
-  </div>
-</header>
-
+<%- include('./partials/head')%> <%- include('./partials/header')%> <% if
+(tno.length === 0) { %>
+<h1>ERROR 404 PAGE NOT FOUND!</h1>
+<% }%>
 <div class="middle-text">
-  <p><%= tno[0].intro%></p>
+  <h2>Exposense</h2>
+  <p><%= tno[0].intro %></p>
+</div>
+<div class="middle-svg">
+  <img loading="lazy" src="/assets/plate-without-color.svg" alt="" />
+</div>
+
+<div class="all-buttons">
+  <button class="svg-button" data-id="1">
+    <img loading="lazy" src="/assets/plus.png" />
+  </button>
+  <button class="svg-button" data-id="1">
+    <img loading="lazy" src="/assets/plus.png" />
+  </button>
+  <button class="svg-button" data-id="3">
+    <img loading="lazy" src="/assets/plus.png" />
+  </button>
+  <button class="svg-button" data-id="4">
+    <img loading="lazy" src="/assets/plus.png" />
+  </button>
+  <button class="svg-button" data-id="5">
+    <img loading="lazy" src="/assets/plus.png" />
+  </button>
 </div>
 
 <% tno.forEach(tno => {%> <% tno.chapters.forEach(chapter => {%>
-<article class="popup-message">
+<article class="popup-message" id="popup-<%= chapter.id %>">
   <a class="loading-picture">
-    <picture>
+    <picture class="close-icon">
       <source srcset="/assets/close.avif" type="image/avif" />
       <source srcset="/assets/close.webp" type="image/webp" />
       <img
@@ -26,11 +45,11 @@
   <div class="popup-image">
     <img
       loading="lazy"
-      src="/assets/<%= chapter.id %>.<%= chapter.title %>.svg"
+      src="/assets/<%= chapter.title %>.svg"
       alt="<%= chapter.title %>"
     />
   </div>
-  <h3><%= chapter.id%>. <%= chapter.title%></h3>
+  <h3><%= chapter.title%></h3>
   <%- chapter.content%>
   <button class="popup-button">
     Bekijk de video
@@ -50,3 +69,5 @@
 <div class="title">
   <h1>Footer</h1>
 </div>
+
+<%- include("./partials/foot") %>
