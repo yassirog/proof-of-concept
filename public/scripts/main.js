@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   // Select all close icons
   const closeIcons = document.querySelectorAll(".close-icon");
 
@@ -37,3 +36,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// NIUEWWWWWWWWWWWWWWWWWWWWW
+  var buttons = document.querySelectorAll('.svg-button');
+
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      if (button.classList.contains('active')) {
+        button.classList.remove('active');
+      } else {
+        buttons.forEach(function(btn) {
+          btn.classList.remove('active');
+        });
+        button.classList.add('active');
+      }
+    });
+  });
+
+  var closeIcons = document.querySelectorAll('.close-icon');
+
+  closeIcons.forEach(function(icon) {
+    icon.addEventListener('click', function(event) {
+      event.preventDefault();
+      var dataId = icon.closest('article').id.split('-')[1];
+      var button = document.querySelector('.svg-button[data-id="' + dataId + '"]');
+      if (button) {
+        button.classList.remove('active');
+      }
+    });
+  });

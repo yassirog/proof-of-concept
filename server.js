@@ -15,7 +15,6 @@ app.get('/', function (request, response) {
   response.render('index', {
       tno: dpiData.data
   })
-  console.log(dpiData.data[0].chapters);
 });
 
 // Stel het poortnummer in waar express naar moet gaan luisteren
