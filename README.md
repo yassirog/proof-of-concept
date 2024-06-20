@@ -15,9 +15,6 @@ Dit project omvat een HandFoot-Print website dat gemaakt is in `VisualCode`.
   * [Licentie](#licentie)
 
 ## Beschrijving
-Deze webapplicatie is in opdracht van CrossmarX. Bij deze hand- footprint calculator moet de klant een goed overzicht hebben hoe milleuvriendelijk zijn bedrijf daadwerkelijk is. Hierbij zijn de volgende betrokkenen belangrijk om te vergelijken: medewerkers, aandeelhouders, leveranciers, klanten en de omgeving.
-Je kan inloggen op je bedrijf, hierin kun je een stakeholder toevoegen aan je bedrijf. Verder moet je een enquete invullen op je stakeholders en zie je de scores uiteindelijk op je dashboard.
-
 Deze webapplicatie is in opdracht van DPI. Bij deze webapplicatie moeten mensen informatie kunnen lezen wanneer je op de buttons klikt. Deze buttons laten popups zien met informatie die over uitstoot in de milieu gaat. Er zijn geen functionaliteiten, het is alleen een informatie pagina. 
 <!-- Voeg een mooie poster visual toe 📸 -->
 ![image](https://github.com/yassirog/proof-of-concept/assets/144006281/bc9f9a94-4f20-4672-ab4e-88e29dfff8fd)
