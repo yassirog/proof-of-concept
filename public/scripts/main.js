@@ -36,9 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// NIUEWWWWWWWWWWWWWWWWWWWWW
+// Select all buttons
   var buttons = document.querySelectorAll('.svg-button');
 
+  // Add click event listener to remove active class from buttons
   buttons.forEach(function(button) {
     button.addEventListener('click', function() {
       if (button.classList.contains('active')) {
@@ -52,8 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Select all buttons
   var closeIcons = document.querySelectorAll('.close-icon');
 
+  //  Add click event listener to close article with the right ID
   closeIcons.forEach(function(icon) {
     icon.addEventListener('click', function(event) {
       event.preventDefault();
